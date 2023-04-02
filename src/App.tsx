@@ -9,10 +9,10 @@ function App(): JSX.Element {
   return (
     <>
       <Header />
-      <main>
+      <main className='flex flex-col gap-7'>
         <BannerHero />
-        <Shelf />
         <RotatingShelf />
+        <Shelf />
       </main>
       <Footer />
     </>
