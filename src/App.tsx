@@ -1,38 +1,20 @@
 import React from 'react';
+import Header from './components/Header';
+import BannerHero from './components/BannerHero';
+import Shelf from './components/Shelf';
+import RotatingShelf from './components/RotatingShelf';
+import Footer from './components/Footer';
 
 function App(): JSX.Element {
   return (
     <>
-      <header>
-        <section>Tipbar goes here</section>
-        <section>Header goes here</section>
-      </header>
+      <Header />
       <main>
-        <section>
-          <div>Categories goes here</div>
-          <div>Banner goes here</div>
-        </section>
-        <section>
-          <div>
-            <h3>Shelf title goes here</h3>
-          </div>
-          <div>Shelf goes here</div>
-        </section>
-        <section>
-          <div>
-            <h3>Rotating Shelf title goes here</h3>
-          </div>
-          <div>Rotating Shelf goes here</div>
-        </section>
+        <BannerHero />
+        <Shelf />
+        <RotatingShelf />
       </main>
-      <footer>
-        <section>
-          <div>
-            <h4>Footer title goes here</h4>
-          </div>
-          <div>Footer link goes here</div>
-        </section>
-      </footer>
+      <Footer />
     </>
   );
 }
