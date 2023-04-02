@@ -7,7 +7,7 @@ import Buy from '../../assets/Buy.svg';
 function Header() {
   return (
     <header className="w-full flex flex-col gap-3">
-      <section className="w-full bg-[#F8CB47] px-4">
+      <section className="w-full bg-[#F8CB47] px-4 py-3 text-[#666666] font-semibold text-sm">
         Delivery in 10 minutes
       </section>
       <section className="px-4">

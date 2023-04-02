@@ -7,13 +7,18 @@ interface ProductCardProps {
     image: string;
     price: number;
   };
+  isFull?: boolean;
 }
 
-function ProductCard({ productInfo }: ProductCardProps) {
+function ProductCard({ productInfo, isFull = false }: ProductCardProps) {
   const [isClicked, setisClicked] = useState(false);
 
   return (
-    <div className="relative w-32 pb-2 flex-none border border-[#EDEDED] rounded-2xl">
+    <div
+      className={`relative ${
+        isFull ? 'w-full' : 'w-32'
+      } pb-2 flex-none border border-[#EDEDED] rounded-2xl`}
+    >
       <FavLogo />
       <img
         src={productInfo.image}
