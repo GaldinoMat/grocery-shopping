@@ -7,18 +7,13 @@ function BannerHero() {
   const Banners = [HomeBanner, HomeBanner, HomeBanner, HomeBanner, HomeBanner];
 
   return (
-    <section className="flex flex-col gap-4 mt-5">
+    <section className="flex flex-col gap-4">
       <div className="px-4">
         <Carroussel>
           {[
             'Fruits & Vegetables',
             'Dairy & Breakfasts',
             'Egg, Meat & Fish',
-            'Bath & Body',
-            'Bath & Body',
-            'Bath & Body',
-            'Bath & Body',
-            'Bath & Body',
             'Bath & Body',
           ].map((item, index) => (
             <CategoryLink link={item} key={index} />
