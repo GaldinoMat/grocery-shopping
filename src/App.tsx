@@ -9,7 +9,7 @@ function App(): JSX.Element {
   return (
     <>
       <Header />
-      <main className="flex flex-col gap-7 md:gap-14 py-5">
+      <main className="flex flex-col gap-7 md:gap-14 py-5 md:py-7 lg:py-9">
         <BannerHero />
         <RotatingShelf />
         <StaticShelf />

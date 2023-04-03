@@ -57,7 +57,18 @@ function StaticShelf() {
           </button>
         </div>
       </div>
-      <div className={`grid grid-cols-${columns} gap-2`}>
+      <div
+        // this class was written this way due to a tailwind's limitation on string interpolation
+        className={`grid ${
+          columns === 2
+            ? 'grid-cols-2'
+            : columns === 3
+            ? 'grid-cols-3'
+            : columns === 4
+            ? 'grid-cols-4'
+            : 'grid-cols-1'
+        } gap-2`}
+      >
         {mockDataArr.map((product, index) => (
           <ProductCard isFull productInfo={product} key={index} />
         ))}
