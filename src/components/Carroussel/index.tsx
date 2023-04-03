@@ -32,7 +32,7 @@ function Carroussel({ children, hide = true }: CarrousselProps) {
         </button>
       )}
       <div
-        className="flex overflow-x-auto scroll-smooth h-auto gap-2 no-scrollbar"
+        className="flex overflow-x-auto scroll-smooth h-auto gap-2 md:gap-3 no-scrollbar"
         ref={dragSlider}
       >
         {children}

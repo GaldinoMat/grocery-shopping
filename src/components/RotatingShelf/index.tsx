@@ -6,7 +6,7 @@ import ShelfTitle from '../ShelfTitle';
 
 function RotatingShelf() {
   return (
-    <section className="px-4 flex flex-col gap-4">
+    <section className="px-4 flex flex-col gap-4 md:px-0 md:mx-auto md:max-w-2xl">
       <ShelfTitle>
         Shop from <span className="text-[#54B22C]">Top Categories</span>
       </ShelfTitle>

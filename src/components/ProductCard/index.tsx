@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import FavLogo from './FavLogo';
+import FavLogo from './components/FavLogo';
 
 interface ProductCardProps {
   productInfo: {
@@ -16,8 +16,8 @@ function ProductCard({ productInfo, isFull = false }: ProductCardProps) {
   return (
     <div
       className={`relative ${
-        isFull ? 'w-full' : 'w-32'
-      } pb-2 flex-none border border-[#EDEDED] rounded-2xl`}
+        isFull ? 'w-full' : 'w-32 md:w-56'
+      } flex-none border border-[#EDEDED] rounded-2xl`}
     >
       <FavLogo />
       <img
@@ -25,11 +25,14 @@ function ProductCard({ productInfo, isFull = false }: ProductCardProps) {
         alt="Product image example"
         className="w-full"
       />
-      <div className="flex flex-col gap-3 px-3">
-        <div className="text-xs font-normal">{productInfo.name}</div>
+      <hr />
+      <div className="flex flex-col gap-3 py-2 md:py-3 px-3 md:px-4">
+        <div className="text-xs font-normal md:text-base">
+          {productInfo.name}
+        </div>
         <div className="flex justify-between items-center">
           <div>
-            <div className="text-xs">R$ {productInfo.price}</div>
+            <div className="text-xs md:text-base">R$ {productInfo.price}</div>
           </div>
           <button
             onClick={() => {
@@ -39,9 +42,9 @@ function ProductCard({ productInfo, isFull = false }: ProductCardProps) {
               isClicked
                 ? 'bg-[#54B22C] text-[#F3F9FB]'
                 : 'bg-[#F3F9FB] text-[#54B22C] hover:text-[#F3F9FB] hover:bg-[#54B22C]'
-            }  px-2 py-1 border  border-[#54B22C] rounded-md transition-colors`}
+            }  px-2 md:px-5 py-1 md:py-[.375rem] border  border-[#54B22C] rounded-md transition-colors`}
           >
-            {isClicked ? 'Added!' : 'Add'}
+            {isClicked ? 'ADDED!' : 'ADD'}
           </button>
         </div>
       </div>

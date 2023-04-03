@@ -11,15 +11,13 @@ function FavLogo() {
         }}
       >
         <svg
-          width="1.75rem"
-          height="1.75rem"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
           className={`${
             isClicked
               ? 'fill-[#54B22C]'
               : 'fill-transparent hover:fill-[#54B22C]'
-          } transition-colors`}
+          } transition-colors w-7 h-7 md:w-9 md:h-9`}
         >
           <g id="Interface / Heart_01">
             <path
