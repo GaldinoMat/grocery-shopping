@@ -27,7 +27,7 @@ function BannerHero() {
         <Carroussel gap={false} hide={false}>
           {Banners.map((Banner, index) => (
             <img
-              className="h-56 md:h-64 lg:h-[39rem] object-cover"
+              className="h-56 md:h-64 tablet-lg:h-[17rem] lg:h-[39rem] object-cover"
               src={Banner}
               alt="Example banner"
               key={index}
