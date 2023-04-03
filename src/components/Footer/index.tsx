@@ -4,7 +4,7 @@ import Logo from '../Header/components/Logo';
 function Footer() {
   return (
     <footer className="bg-[#F3F9FB] p-4">
-      <section className="flex flex-col gap-4 md:gap-5 md:px-0 md:max-w-2xl md:mx-auto">
+      <section className="flex flex-col gap-4 md:gap-5 md:px-0 md:max-w-2xl lg:max-w-6xl md:mx-auto">
         <Logo />
         <div className="border-b-2 pb-1 border-[#666666] max-w-[12.5rem]">
           <h4 className="text-[#414141] font-normal text-base md:text-xl">

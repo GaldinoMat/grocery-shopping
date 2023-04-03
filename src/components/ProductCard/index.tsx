@@ -25,8 +25,8 @@ function ProductCard({ productInfo, isFull = false }: ProductCardProps) {
         alt="Product image example"
         className="w-full"
       />
-      <hr />
-      <div className="flex flex-col gap-3 py-2 md:py-3 px-3 md:px-4">
+      <hr className='w-11/12 mx-auto' />
+      <div className="flex flex-col gap-3 md:gap-4 py-2 md:py-3 px-3 md:px-4">
         <div className="text-xs font-normal md:text-base">
           {productInfo.name}
         </div>

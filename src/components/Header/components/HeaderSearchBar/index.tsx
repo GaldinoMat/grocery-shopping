@@ -4,7 +4,7 @@ import Search from '../../../../assets/Search.svg';
 function HeaderSearchBar() {
   return (
     <form
-      className="bg-[#F3F9FB] max-w-[25rem] md:w-80 h-10 rounded-lg flex p-3 items-center justify-center"
+      className="bg-[#F3F9FB] max-w-[25rem] md:w-80 lg:w-[32rem] h-10 rounded-lg flex p-3 items-center justify-center"
       action=""
     >
       <button>

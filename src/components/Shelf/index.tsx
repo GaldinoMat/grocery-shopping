@@ -8,18 +8,22 @@ import { useIsMobile } from './hooks/useIsMobile';
 function StaticShelf() {
   const [columns, setColumns] = useState(2);
 
-  const isMobile = useIsMobile();
+  const { isMobile, isDesktop, isTablet } = useIsMobile();
 
   useEffect(() => {
-    if (!isMobile) {
-      columns === 2 ? setColumns(3) : setColumns(2);
-    } else {
+    if (isMobile) {
       columns === 3 ? setColumns(2) : setColumns(1);
     }
-  }, [isMobile]);
+    if (isTablet) {
+      columns === 2 || columns === 4 ? setColumns(3) : setColumns(2);
+    }
+    if (isDesktop) {
+      columns === 3 ? setColumns(4) : setColumns(3);
+    }
+  }, [isMobile, isDesktop, isTablet]);
 
   return (
-    <section className="px-4 flex flex-col gap-4 md:px-0 md:mx-auto md:w-[42rem]">
+    <section className="px-4 flex flex-col gap-4 md:px-0 md:mx-auto md:w-[42rem] lg:max-w-6xl lg:w-full">
       <div className="flex justify-between items-center">
         <ShelfTitle>
           Check out our <span className="text-[#54B22C]">Top Products</span>
@@ -28,7 +32,12 @@ function StaticShelf() {
           <button
             className="h-4"
             onClick={() => {
-              setColumns(isMobile ? 1 : 2);
+              setColumns(() => {
+                if (isTablet) return 2;
+                if (isDesktop) return 3;
+
+                return 1;
+              });
             }}
           >
             <SingleColumn />
@@ -36,7 +45,12 @@ function StaticShelf() {
           <button
             className="h-4"
             onClick={() => {
-              setColumns(isMobile ? 2 : 3);
+              setColumns(() => {
+                if (isTablet) return 3;
+                if (isDesktop) return 4;
+
+                return 2;
+              });
             }}
           >
             <MultipleColumns />
