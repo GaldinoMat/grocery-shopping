@@ -6,4 +6,4 @@ export const mockInfo = {
   price: 140,
 };
 
-export const mockDataArr = [mockInfo, mockInfo, mockInfo, mockInfo, mockInfo];
+export const mockDataArr = [mockInfo, mockInfo, mockInfo, mockInfo, mockInfo, mockInfo];

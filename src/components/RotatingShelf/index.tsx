@@ -10,7 +10,7 @@ function RotatingShelf() {
       <ShelfTitle>
         Shop from <span className="text-[#54B22C]">Top Categories</span>
       </ShelfTitle>
-      <Carroussel>
+      <Carroussel hide={false}>
         {mockDataArr.map((product, index) => (
           <ProductCard productInfo={product} key={index} />
         ))}
