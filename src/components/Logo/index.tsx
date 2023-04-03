@@ -1,5 +1,5 @@
 import React from 'react';
-import FreshCart from '../../../../assets/Freshcart Logo.svg';
+import FreshCart from '../../assets/Freshcart Logo.svg';
 
 function Logo() {
   return (
@@ -7,7 +7,7 @@ function Logo() {
       <img
         src={FreshCart}
         alt="Green and Yellow freshcart logo"
-        className="w-[6.75rem] h-5 md:w-40 md:h-9"
+        className="w-[8.75rem] h-10 md:w-40 md:h-9 lg:w-48"
       />
     </div>
   );

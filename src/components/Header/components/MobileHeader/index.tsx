@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderSearchBar from '../HeaderSearchBar';
-import Logo from '../Logo';
+import Logo from '../../../Logo';
 import LoginCart from '../LoginCart';
 
 function MobileHeader() {
