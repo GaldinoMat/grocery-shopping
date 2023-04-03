@@ -32,7 +32,7 @@ function ProductCard({ productInfo, isFull = false }: ProductCardProps) {
         </div>
         <div className="flex justify-between items-center">
           <div>
-            <div className="text-xs md:text-base">R$ {productInfo.price}</div>
+            <div className="text-xs md:text-xl">R$ {productInfo.price}</div>
           </div>
           <button
             onClick={() => {
