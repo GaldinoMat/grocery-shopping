@@ -25,7 +25,7 @@ function ProductCard({ productInfo, isFull = false }: ProductCardProps) {
         alt="Product image example"
         className="w-full"
       />
-      <hr className='w-11/12 mx-auto' />
+      <hr className="w-11/12 mx-auto" />
       <div className="flex flex-col gap-3 md:gap-4 py-2 md:py-3 px-3 md:px-4">
         <div className="text-xs font-normal md:text-base">
           {productInfo.name}
@@ -42,7 +42,7 @@ function ProductCard({ productInfo, isFull = false }: ProductCardProps) {
               isClicked
                 ? 'bg-[#54B22C] text-[#F3F9FB]'
                 : 'bg-[#F3F9FB] text-[#54B22C] hover:text-[#F3F9FB] hover:bg-[#54B22C]'
-            }  px-2 md:px-5 py-1 md:py-[.375rem] border  border-[#54B22C] rounded-md transition-colors`}
+            }  px-2 md:px-7 py-1 md:py-3 border md:text-sm border-[#54B22C] rounded-md transition-colors`}
           >
             {isClicked ? 'ADDED!' : 'ADD'}
           </button>
